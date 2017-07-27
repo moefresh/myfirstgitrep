@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forin循环</title>
+	<style>
+		#div1{
+			height:300px;
+			width:300px;
+			background-color: #E28787;
+	}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script >
+	// 对象设置css
+		var a=document.getElementById('div1');
+		function setCss(obj,attr){
+			var cssobj=obj.style;
+			for(var x in attr){
+				cssobj[x]=attr[x];
+				
+
+			};
+		};
+		// a.style.backgroundColor="blue";
+		setCss(a,{
+			
+			backgroundColor:"#29E7E1",
+			height:200+"px"
+		});
+		setCss(a,{
+			
+			width:500+"px"
+		});
+
+	</script>
+</body>
+</html>

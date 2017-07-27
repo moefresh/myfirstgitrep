@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dialog</title>
+	<style>
+		html{
+			height:  100%;
+		}
+		body{
+			min-height: 100%;
+		}
+		.dialog{
+			position: absolute;
+			height: 300px;
+			width: 300px;
+			border:1px solid #7D7878;
+			display: none;
+			background-color:#917B7B;
+			opacity: 0.6;
+
+		}
+		input{
+			height: 30px;
+			width: 60px;
+			border-radius: 5px;
+			background-color: #F079DC;
+			outline: none;
+
+
+		}
+	</style>
+</head>
+<body>
+	<input class="dialogbtn" type="button" value="out">
+	<div class="dialog"></div>
+	<p>12345674</p>
+	<script>
+		var a="display";
+		window.onload=function(){
+			var aDialog=document.getElementsByClassName('dialog')[0];
+			var aBtn=document.getElementsByClassName('dialogbtn')[0];
+			var oBody=document.getElementsByTagName('body')[0];
+			aBtn.onclick=function(){
+				aDialog.style[a]="block";
+				oBody.style.backgroundColor="#9B9393";
+				alert(document.body.clientHeight);
+
+			};
+
+		}
+		
+
+
+
+		}
+	</script>
+	<script>
+
+	</script>
+
+</body>
+</html>

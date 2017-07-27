@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>事件委托</title>
+	<style>
+		div1{
+			width: 50%;
+
+		}
+		li{
+			list-style: none;
+			line-height: 50px;
+			border: 1px solid red;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		
+		
+	</div>
+	<input type="button" value="添加li">
+	<script>
+		var oin=document.getElementsByTagName('input')[0];
+		var o=document.getElementById('div1');
+		o.addEventListener('click',function(e){
+			alert(e.target);
+		})
+
+		oin.addEventListener('click',function(){
+			var ele=document.createElement('li');
+			ele.innerHTML="6";
+			o.appendChild(ele);
+		})
+	</script>
+</body>
+</html>

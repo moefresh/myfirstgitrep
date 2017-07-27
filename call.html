@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call</title>
+</head>
+<body>
+	<div id="div1"></div>
+<script>
+	"use strict"
+	function Animal(name,age){
+		this.name=name||"miku";
+		this.age=age||15;
+		Animal.prototype.eat=function(){
+			console.log("吃掉吃掉~~"+this.name);
+		}
+	}
+	// new Animal("miku",15).eat();
+	function Cat(name,age,sex){
+		Animal.call(this,name,age);
+		this.sex=sex;
+		
+	}
+	Cat.prototype=new Animal("lulu",13);
+	// console.log(new Cat("miku",15,"少女").name);
+	var cat=new Cat("miku",15,"少女");
+	console.log(cat.__proto__.name);
+	cat.eat();
+</script>
+	
+</body>
+</html>
